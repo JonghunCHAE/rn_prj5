@@ -10,7 +10,7 @@ const Container = Styled.View`
     background-color: #333333;
 `;
 
-const InputFiled = Styled.TextInput`
+const InputField = Styled.TextInput`
     flex: 1;
     color: #FFFFFF:
 `;

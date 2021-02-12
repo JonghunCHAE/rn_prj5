@@ -1,17 +1,13 @@
 import React, {useContext, useEffect} from 'react';
 import Styled from 'styled-components/native';
-import { Linking } from "react-native";
+import {Linking} from 'react-native';
 import SplashScreen from 'react-native-splash-screen';
 import {StackNavigationProp} from '@react-navigation/stack';
 
 import {UserContext} from '~/Context/User';
-
 import Input from '~/Components/Input';
 import Button from '~/Components/Button';
-import {UserContext} from '~/Context/User';
-
-import Input from '~/Components/Input';
-import Button from '~/Components/Button';
+import { ScreenStackHeaderBackButtonImage } from 'react-native-screens';
 
 const Container = Styled.SafeAreaView`
     flex: 1;
@@ -32,7 +28,7 @@ const PasswordReset = Styled.Text`
     text-align: center;
 `;
 
-type NavigationProp = StackNavigationProp<LoginNaviParamList, 'Login'>;
+type NavigationProp = StackNavigationPRop<LoginNaviParamList, 'Login'>;
 
 interface Props {
     navigation: NavigationProp;
@@ -57,15 +53,15 @@ const Login = ({navigation}: Props) => {
                 <Button
                     style={{marginBottom: 24}}
                     label="로그인"
-                    onPres={() => {
-                        login('dev.yakuza@gamil.com', "password");
+                    onPress={() => {
+                        login('dev.yakuza@gamil.com', 'password');
                     }}
                 />
                 <PasswordReset
                     onPress={() => {
                         Linking.openURL('https://dev-yakuza.github.io/ko/');
                     }}>
-                        비밀번호 재설정
+                    비밀번호 재설정
                 </PasswordReset>
             </FormContainer>
         </Container>
